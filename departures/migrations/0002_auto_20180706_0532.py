@@ -15,7 +15,6 @@ def import_departures_csv(apps, schema_editor):
     Departure = apps.get_model('departures', 'Departure')
     
     for item in departures:
-        print(item)
         departure_record = Departure(
                                 name=item['name'], 
                                 start_date=item['start_date'], 

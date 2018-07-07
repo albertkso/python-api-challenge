@@ -114,12 +114,12 @@ Otherwise, the rest is up to you!
 
 ## Outcome ##
 
-Completing the challenge took about 3.25 hours.  
+Completing the challenge took about 3.5 hours.  
 
 - importing data ~ 1.0 hours  
 - results set filter ~ 0.75 hours
 - CSV generation ~ 1.0 hours
-- documentation and code refactor/cleanup ~ 0.50 hours
+- documentation, test, code refactor/cleanup ~ 0.75 hours
 
 Google was useful for helping solve some common coding problems 
 for this challenge (for example how to implement a data migration in 
@@ -132,3 +132,11 @@ Command line interpreter was useful to get the shape of the data
 returned by the departures API. Other considerations are maybe coding
 style guidelines and unit tests, if requirements grow or become more 
 stringent :)
+
+To replicate environment, do
+```
+- pip install -r requirements.txt
+- python manage.py migrate
+- python manage.py runserver
+- python query.py
+```

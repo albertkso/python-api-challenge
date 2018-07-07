@@ -36,13 +36,12 @@ def get_departures(query_url):
         response_json = response_raw.json()
         results = response_json['results']
         next_page = response_json['next']
+      # Get next page of departure data, if necessary
+      # Assume data set isn't too large, refactor if this is an issue :)
+        if next_page: results = results + get_departures(next_page)
+
     except:
         print(f'error: exception {sys.exc_info()[0]}')
-
-  # Get next page of departure data, if necessary
-  # Assume data set isn't too large, refactor if this is an issue :)
-    if next_page:
-        results = results + get_departures(next_page)
 
     return results
 
@@ -63,6 +62,8 @@ def create_csv(dataset, csv_file):
                 item['finish_date'], 
                 item['category']]
             )
+
+    print(f'{csv_file} generated')
             
 
 if __name__ == '__main__':
