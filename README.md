@@ -114,7 +114,8 @@ Otherwise, the rest is up to you!
 
 ## Outcome ##
 
-Completing the challenge took about 3.5 hours.
+Completing the challenge took about 3.5 hours (the script file created 
+is named `query.py`.
 
 - importing data ~ 1.0 hours  
 - results set filter ~ 0.75 hours
