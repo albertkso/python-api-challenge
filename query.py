@@ -40,6 +40,7 @@ def get_departures(query_url):
         print(f'error: exception {sys.exc_info()[0]}')
 
   # Get next page of departure data, if necessary
+  # Assume data set isn't too large, refactor if this is an issue :)
     if next_page:
         results = results + get_departures(next_page)
 

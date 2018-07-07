@@ -111,3 +111,22 @@ We've included a basic Django project and a `Departure` model with some fields,
 which you will consume.
 
 Otherwise, the rest is up to you!
+
+## Outcome ##
+
+Completing the challenge took about 3.25 hours.  
+
+- importing data ~ 1.0 hours  
+- results set filter ~ 0.75 hours
+- CSV generation ~ 1.0 hours
+- documentation and code refactor/cleanup ~ 0.50 hours
+
+Google is useful for helping solve common coding problems (for
+example how to implement a data migration in Django, how to create a
+CSV file, what's an active Python module used for REST queries, how 
+to compare dates, etc).
+
+Command line interpreter was useful to get the shape of the data 
+returned by the departures API.  Other considerations are maybe code
+style guide and unit tests, if requirements or data set or code base
+grows or become more stringent :)
