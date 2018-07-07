@@ -3,6 +3,7 @@ from datetime import datetime
 
 import csv
 import requests
+import sys
 
 
 def filter_results(results, cutoff_date, category):
@@ -21,19 +22,22 @@ def filter_results(results, cutoff_date, category):
     return filtered_results
 
 
-def get_departures():
+def get_departures(dep_url):
 
-    dep_url = 'http://localhost:8000/departures'
-    response_raw = requests.get(dep_url)
-    response_json = response_raw.json()
-    results = response_json['results']
+    try:
+        response_raw = requests.get(dep_url)
+        response_json = response_raw.json()
+        results = response_json['results']
+    except:
+        print(f'exception generated: {sys.exc_info()[0]}')
+        results = None
 
     return results
 
 
-def create_csv(dataset):
+def create_csv(dataset, csv_file):
 
-    with open('filtered.csv', 'w', newline='') as csvfile:
+    with open(csv_file, 'w', newline='') as csvfile:
         csvwriter = csv.writer(csvfile, delimiter=',',
                                 quotechar='|', quoting=csv.QUOTE_MINIMAL)
         csvwriter.writerow(['Name', 'Start Date', 'Finish Date', 'Category'])
@@ -51,8 +55,13 @@ if __name__ == '__main__':
 
     cutoff_date = '2018-06-01'
     category = 'Adventurous'
+    api_url = 'http://localhost:8000/departures'
+    csv_file = 'output.csv'
 
-    results = get_departures()
+    results = get_departures(api_url)
+    if not results: sys.exit(1)
+
     filtered_results = filter_results(results, cutoff_date, category)
-    create_csv(filtered_results)
+    create_csv(filtered_results, csv_file)
 
+    sys.exit(0)
