@@ -4,8 +4,8 @@ from django.db import migrations
 
 import json
 
-# Reads records from departures.json and creates corresponding 
-# records in Django database
+# Reads records from departures.json and creates and inserts 
+# corresponding records into Django database
 
 def import_departures_csv(apps, schema_editor):
 

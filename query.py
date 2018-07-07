@@ -6,6 +6,9 @@ import requests
 import sys
 
 
+# Gets raw list of departures and returns filtered list of departures
+# which come after 'cutoff_date' and match 'category'
+
 def filter_results(results, cutoff_date, category):
 
     filtered_results = []
@@ -22,18 +25,28 @@ def filter_results(results, cutoff_date, category):
     return filtered_results
 
 
-def get_departures(dep_url):
+# Queries for and returns departure information
 
+def get_departures(query_url):
+
+  # Get departures data
+    results = None
     try:
-        response_raw = requests.get(dep_url)
+        response_raw = requests.get(query_url)
         response_json = response_raw.json()
         results = response_json['results']
+        next_page = response_json['next']
     except:
-        print(f'exception generated: {sys.exc_info()[0]}')
-        results = None
+        print(f'error: exception {sys.exc_info()[0]}')
+
+  # Get next page of departure data, if necessary
+    if next_page:
+        results = results + get_departures(next_page)
 
     return results
 
+
+# Creates CSV file based on contents of 'dataset' and outputs to 'csvfile'
 
 def create_csv(dataset, csv_file):
 
