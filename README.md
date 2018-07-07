@@ -121,12 +121,14 @@ Completing the challenge took about 3.25 hours.
 - CSV generation ~ 1.0 hours
 - documentation and code refactor/cleanup ~ 0.50 hours
 
-Google is useful for helping solve common coding problems (for
-example how to implement a data migration in Django, how to create a
-CSV file, what's an active Python module used for REST queries, how 
-to compare dates, etc).
+Google was useful for helping solve some common coding problems 
+for this challenge (for example how to implement a data migration in 
+Django, how to create a CSV file, what's an active Python module used
+for REST queries, how to compare dates, etc).
+
+`requirements.txt` was updated to include a new module.
 
 Command line interpreter was useful to get the shape of the data 
-returned by the departures API.  Other considerations are maybe code
-style guide and unit tests, if requirements or data set or code base
-grows or become more stringent :)
+returned by the departures API. Other considerations are maybe coding
+style guidelines and unit tests, if requirements grow or become more 
+stringent :)
