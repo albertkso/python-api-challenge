@@ -114,7 +114,7 @@ Otherwise, the rest is up to you!
 
 ## Outcome ##
 
-Completing the challenge took about 3.5 hours.  
+Completing the challenge took about 3.5 hours.
 
 - importing data ~ 1.0 hours  
 - results set filter ~ 0.75 hours
@@ -133,10 +133,10 @@ returned by the departures API. Other considerations are maybe coding
 style guidelines and unit tests, if requirements grow or become more 
 stringent :)
 
-To replicate environment, do
+To replicate the environment, do the following
 ```
 - pip install -r requirements.txt
 - python manage.py migrate
 - python manage.py runserver
-- python query.py
 ```
+Execute `python query.py` to generate the CSV file.
