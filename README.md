@@ -114,11 +114,11 @@ Otherwise, the rest is up to you!
 
 ## Outcome ##
 
-Completing the challenge took about 3.5 hours (the script file created 
-is named `query.py`.
+Completing the challenge took about 3.5 hours (the script created 
+is named `query.py`).
 
 - importing data ~ 1.0 hours  
-- results set filter ~ 0.75 hours
+- query and results set filter ~ 0.75 hours
 - CSV generation ~ 1.0 hours
 - documentation, test, code refactor/cleanup ~ 0.75 hours
 
