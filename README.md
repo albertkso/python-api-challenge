@@ -114,27 +114,28 @@ Otherwise, the rest is up to you!
 
 ## Outcome ##
 
-Completing the challenge took about 3.5 hours (the script created 
-is named `query.py`).
+Completing the challenge took about 3.5 hours. (`query.py` is the name of
+the script used to create the CSV file).
 
 - importing data ~ 1.0 hours  
 - query and results set filter ~ 0.75 hours
 - CSV generation ~ 1.0 hours
 - documentation, test, code refactor/cleanup ~ 0.75 hours
 
-Google was useful for helping solve some common coding problems 
-for this challenge (for example how to implement a data migration in 
-Django, how to create a CSV file, what's an active Python module used
-for REST queries, how to compare dates, etc).
+No time needed for pip, Python 3.x, virtual envs, these were already
+set up on my laptop. Google was useful for helping solve some of the
+problems this challenge posed (for example how to implement a data migration
+in Django, how to create a CSV file, what's an active Python module
+used for REST queries, how to compare dates, etc).
 
 `requirements.txt` was updated to include a new module.
 
-Command line interpreter was useful to get the shape of the data 
-returned by the departures API. Other considerations are maybe coding
-style guidelines and unit tests, if requirements grow or become more 
-stringent :)
+Command line interpreter was useful for getting the shape of the data 
+returned by the departures API and provided a way to code accordingly.
+Other considerations are maybe coding style guidelines and unit tests,
+if requirements grow or become more stringent :)
 
-To replicate the environment, do the following
+To replicate the environment, do the following within a clean environment
 ```
 - pip install -r requirements.txt
 - python manage.py migrate
