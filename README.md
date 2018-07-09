@@ -122,11 +122,10 @@ the script used to create the CSV file).
 - CSV generation ~ 1.0 hours
 - documentation, test, code refactor/cleanup ~ 0.75 hours
 
-No time needed for pip, Python 3.x, virtual envs, these were already
-set up on my laptop. Google was useful for helping solve some of the
-problems this challenge posed (for example how to implement a data migration
-in Django, how to create a CSV file, what's an active Python module
-used for REST queries, how to compare dates, etc).
+Google was useful for helping solve some of the problems this challenge
+posed (for example how to implement a data migration in Django, how to
+create a CSV file, what's an active Python module used for REST queries,
+how to compare dates, etc).
 
 `requirements.txt` was updated to include a new module.
 
