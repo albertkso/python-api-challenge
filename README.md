@@ -125,7 +125,8 @@ the script used to create the CSV file).
 Google was useful for helping solve some of the problems this challenge
 posed (for example how to implement a data migration in Django, how to
 create a CSV file, what's an active Python module used for REST queries,
-how to compare dates, etc).
+etc). After that it was a matter of writing the necessary code to 
+address the requirements.
 
 `requirements.txt` was updated to include a new module.
 
@@ -140,4 +141,4 @@ To replicate the environment, do the following within a clean environment
 - python manage.py migrate
 - python manage.py runserver
 ```
-Execute `python query.py` to generate the CSV file.
+Execute `python query.py` to generate the CSV file. Python 3.6 was used.
